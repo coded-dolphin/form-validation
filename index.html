@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="frm">
+    <h1>Information Form</h1>
+        <form action="/" name="f1" id="form" onsubmit="return check()">
+            <label for="name">Name:
+                <input type="text" name="name" id="name" placeholder="Name">
+            </label><span id="s1"></span><br>
+            <label>Age:
+                <input type="number" name="age" id="age" placeholder="Age">
+            </label><span id="s2"></span><br>
+            <label>Number:
+                <input type="number" name="number" id="number" placeholder="Number">
+            </label><span id="s3"></span><br>
+            <label>Email:
+                <input type="email" name="email" id="email" placeholder="jon@gmail.com">
+            </label><span id="s4"></span><br>
+            <input type="submit" value="submit" id="submit">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
