@@ -10,12 +10,103 @@ html {
 
 body {
     height: 100%;
-    font-family: monospace;
+    font-family: sans-serif;
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
+}
+
+nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 4.1em;
+}
+
+
+.navlist li a{
+    color: aliceblue;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 18;
+}
+
+.navlist li a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: rgb(84, 88, 88);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.1s;
+}
+
+.navlist li .active::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 40%;
+    background-color: aquamarine;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    z-index: 999;
+}
+
+.navlist li a:hover:after{
+    width: 40%;
+}
+
+.logoSpan {
+    color: rgb(108, 230, 199);
+}
+
+.cta {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.cta button{
+    border: none;
+    padding: 10px 30px;
+    background-color: aquamarine;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 550;
+    text-transform: capitalize;
+    transition: background-color .2s ease-in-out;
+}
+
+.cta button:hover{
+    background-color: rgba(127, 255, 212, 0.568);
 }
 
 .frm {
