@@ -23,7 +23,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,4 +171,14 @@ label {
 
 span {
     color: red;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
 }
